@@ -12,7 +12,7 @@
 | [askstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#asks-stories) | Gets the top ask stories posted on HakerNews. |
 | [showstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#shows-stories) | Gets the show stories posted on HakerNews. |
 | [jobstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#job-stories) | Gets the latest jobs posted on HakerNews. |
-| [updates](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#updates) | Gets item ids and profile ids where there were changes. |
+| [updates](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#updates) | Gets item ids and users ids where there were changes. |
 
 
 <h2>Items</h2>
@@ -25,15 +25,15 @@ Gets the information about the item (job, story, comment, poll or pollopt).
 
 <h3>Path parameters</h3>
 
-|Parameter    | Type | Description |
+|Parameter | Type | Description |
 | ------------- |-------------|--------|
-| id   | integer | Required. The item's unique id. |
+| id | integer | Required. The item's unique identifier. |
 
 <h3>Query parameters</h3>
 
-|Parameter    | Type | Description |
+|Parameter | Type | Description |
 | ------------- |-------------|--------|
-| print   | string | Optional. defaul is pretty |
+| print | string | Optional. Defaul is pretty. |
 
 <h3>Response</h3>
 
@@ -55,8 +55,8 @@ Gets the information about the item (job, story, comment, poll or pollopt).
 
 |Parameter    | Type | Description | Story | Job | Comment | Poll |Pollopt|
 | ------------- |-------------|--------|--------|--------|--------|--------|--------|
-| id   | integer | Required. The item's unique id.|✔|✔|✔|✔|✔|
-| deleted | boolean | Optional. true if the item is deleted.  |✔|✔|✔|✔|✔|
+| id   | integer | Required. The item's unique identifier.|✔|✔|✔|✔|✔|
+| deleted | boolean | Optional. Acceptable values: * 'true' if the item is deleted.  |✔|✔|✔|✔|✔|
 | type | string | Required. The type of item. One of "job", "story", "comment", "poll", or "pollopt".    |✔|✔|✔|✔|✔|
 | by | string | Optional. The username of the item's author.    |✔|✔|✔|✔|✔|
 | time | integer | Optional. Creation date of the item, in Unix Time.    |✔|✔|✔|✔|✔|
@@ -113,7 +113,7 @@ Gets the current user's HakerNews profile. Only users that have public activity 
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-| print   | string | Optional. defaul is pretty |
+| print   | string | Optional. Defaul is pretty. |
 
 <h3>Response</h3>
 
@@ -173,7 +173,7 @@ Gets the current largest item id. You can walk backward from here to discover al
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-| print   | string | Optional. Defaul is pretty |
+| print   | string | Optional. Defaul is pretty. |
 
 <h3>Response</h3>
 
@@ -185,7 +185,7 @@ integer
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-id | integer | Required. The current largest item id.
+id | integer | Required. The current largest item identifier.
 
 <h3>Example</h3>
 
@@ -213,7 +213,7 @@ Gets the top ask stories posted on HakerNews (also contains jobs). Up to 500.
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-| print   | string | Optional. Defaul is pretty |
+| print   | string | Optional. Defaul is pretty. |
 
 <h3>Response</h3>
 
@@ -269,7 +269,7 @@ Up to 500 top stories (also contains jobs).
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-| print   | string | Optional. Defaul is pretty |
+| print   | string | Optional. Defaul is pretty. |
 
 <h3>Response</h3>
 
@@ -325,7 +325,7 @@ Gets the best stories posted on HakerNews.
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-| print   | string | Optional. defaul is pretty |
+| print   | string | Optional. Defaul is pretty. |
 
 <h3>Response</h3>
 
@@ -381,7 +381,7 @@ Up to 200 of the latest Ask stories
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-| print   | string | Optional. defaul is pretty |
+| print   | string | Optional. Defaul is pretty. |
 
 <h3>Response</h3>
 
@@ -437,7 +437,7 @@ Gets the show stories posted on HakerNews. Up to 200.
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-| print   | string | Optional. defaul is pretty |
+| print   | string | Optional. Defaul is pretty. |
 
 <h3>Response</h3>
 
@@ -493,7 +493,7 @@ Gets the latest jobs posted on HakerNews. Up to 200.
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-| print   | string | Optional. defaul is pretty |
+| print   | string | Optional. Defaul is pretty. |
 
 <h3>Response</h3>
 
@@ -539,7 +539,7 @@ stories id | array[integer] | Required. Max 200 id.
 
 <h2>Updeites</h2>
 
-Gets item ids and profile ids where there were changes.
+Gets item ids and users ids where there were changes.
 
 <h3>HTTP request</h3>
 
@@ -549,7 +549,7 @@ Gets item ids and profile ids where there were changes.
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-| print   | string | Optional. Defaul is pretty |
+| print   | string | Optional. Defaul is pretty. |
 
 <h3>Response</h3>
 
@@ -581,7 +581,7 @@ Gets item ids and profile ids where there were changes.
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
 items[] | array[integer] | Required. The list of HackerNews item ids where there were changes.
-profiles[] | array[string] | Required. The list of HackerNews profiles ids where there were changes.
+profiles[] | array[string] | Required. The list of HackerNews users ids where there were changes. User id can only contain letters, digits, dashes and underscores, and could be between 2 and 15 characters long.
 
 <h3>Example</h3>
 
