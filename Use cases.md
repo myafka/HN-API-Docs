@@ -81,4 +81,12 @@ In response you will get an sorted array.
 ..., 
 {'by': 'sumitg12', 'descendants': 0, 'id': 24065308, 'score': 1, 'time': 1596659900, 'title': 'Auto Labeling for Images', 'type': 'story', 'url': 'https://developer.ibm.com/technologies/artificial-intelligence/blogs/ibm-cloud-annotations-tool-eases-the-process-of-ai-data-labeling/'}]
 ```
-Well done! The stories Why there’s so little left of the early internet has the bigest score.
+Well done! The stories "Why there’s so little left of the early internet" has the bigest score.
+
+<h2>Create mobile app</h2>
+
+Our API uses Firebase. Firebase serves as a database that changes in real time and stores data in JSON. Any changes to the database are immediately synced between all clients or devices that use the same database. 
+
+You can use Firebase SDK to create a mobile app for Android and iOS. To get started, visit the [Firebase setup instructions](https://firebase.google.com/docs/).
+
+Here is an example of a ready-made [Swift app](https://github.com/timshim/Hackery).
