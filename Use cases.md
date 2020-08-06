@@ -26,7 +26,7 @@ cut_data = data[:50]
 
 print(cut_data)
 ```
-In response you will get an array with 50 ids of the new stories.
+In response, you will get an array with 50 ids of the stories.
 
 ```
 [
@@ -73,7 +73,8 @@ items_list.sort(key=extract_score, reverse=True)
 
 print(items_list)
 ```
-In response you will get an sorted array.
+
+In response, you will get a sorted array.
 
 ```
 [{'by': 'ElectronShak', 'descendants': 9, 'id': 24065379, 'kids': [24065844, 24065880, 24065860, 24065865, 24065752, 24065777, 24065637], 'score': 46, 'time': 1596660235, 'title': 'Why there’s so little left of the early internet', 'type': 'story', 'url': 'https://www.bbc.com/future/article/20190401-why-theres-so-little-left-of-the-early-internet'}, 
@@ -81,11 +82,12 @@ In response you will get an sorted array.
 ..., 
 {'by': 'sumitg12', 'descendants': 0, 'id': 24065308, 'score': 1, 'time': 1596659900, 'title': 'Auto Labeling for Images', 'type': 'story', 'url': 'https://developer.ibm.com/technologies/artificial-intelligence/blogs/ibm-cloud-annotations-tool-eases-the-process-of-ai-data-labeling/'}]
 ```
+
 Well done! The stories "Why there’s so little left of the early internet" has the bigest score.
 
-<h2>Create mobile app</h2>
+<h2>Create a mobile app</h2>
 
-Our API uses Firebase. Firebase serves as a database that changes in real time and stores data in JSON. Any changes to the database are immediately synced between all clients or devices that use the same database. 
+Our API uses Firebase. Firebase serves as a database that changes in real-time and stores data in JSON. Any changes to the database are immediately synced between all clients or devices that use the same database. 
 
 You can use Firebase SDK to create a mobile app for Android and iOS. To get started, visit the [Firebase setup instructions](https://firebase.google.com/docs/).
 
