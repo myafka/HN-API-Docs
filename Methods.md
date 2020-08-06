@@ -3,21 +3,21 @@
 
 | Method      | Description |
 | ------------- |-------------|
-| [items](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#Items) | Gets the information about the item (job, story, comment, poll or pollopt). |
-| [users](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#Users) | Gets the current user's HakerNews profile. |
-| [maxitem](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#max-item-id) | Gets the current largest item id. |
-| [topstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#top-stories) | Gets the top stories posted on HakerNews. |
-| [newstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#new-stories) | Gets the newest stories posted on HakerNews. |
-| [beststories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#bests-stories) | Gets the best stories posted on HakerNews. |
-| [askstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#asks-stories) | Gets the top Ask stories posted on HakerNews. |
-| [showstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#shows-stories) | Gets the Show stories posted on HakerNews. |
-| [jobstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#job-stories) | Gets the latest Jobs posted on HakerNews. |
-| [updates](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#updates) | Gets item ids and users ids where there were changes. |
+| [items](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#Items) | Returns the information about the item (job, story, comment, poll or pollopt). |
+| [users](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#Users) | Returns the current user's HakerNews profile. |
+| [maxitem](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#max-item-id) | Returns the current largest item ID. |
+| [topstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#top-stories) | Returns the top stories posted on HakerNews. |
+| [newstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#new-stories) | Returns the newest stories posted on HakerNews. |
+| [beststories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#bests-stories) | Returns the best stories posted on HakerNews. |
+| [askstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#asks-stories) | Returns the top Ask stories posted on HakerNews. |
+| [showstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#shows-stories) | Returns the Show stories posted on HakerNews. |
+| [jobstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#job-stories) | Returns the latest Jobs posted on HakerNews. |
+| [updates](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#updates) | Returns item IDs and users IDs where there were changes. |
 
 
 <h2>Items</h2>
 
-Gets the information about the item (job, story, comment, poll or pollopt).
+Returns the information about the item (job, story, comment, poll or pollopt).
 
 <h3>HTTP request</h3>
 
@@ -55,20 +55,20 @@ Gets the information about the item (job, story, comment, poll or pollopt).
 
 |Parameter    | Type | Description | Story | Job | Comment | Poll |Pollopt|
 | ------------- |-------------|--------|--------|--------|--------|--------|--------|
-| id   | integer | Required. The item's unique identifier.|✔|✔|✔|✔|✔|
+| id   | integer | Required. The item's unique ID.|✔|✔|✔|✔|✔|
 | deleted | boolean | Optional. 'true' - if the item is deleted.  |✔|✔|✔|✔|✔|
-| type | string | Required. The type of item. Acceptable values: "job", "story", "comment", "poll", or "pollopt".    |✔|✔|✔|✔|✔|
-| by | string | Optional. The username of the item's author.    |✔|✔|✔|✔|✔|
-| time | integer | Optional. Creation date of the item, in Unix Time.    |✔|✔|✔|✔|✔|
-| text | string | Optional. The comment, story or poll text. HTML.    ||✔|✔|✔||
+| type | string | Required. The type of item. Possible values: "job", "story", "comment", "poll", or "pollopt".    |✔|✔|✔|✔|✔|
+| by | string | Optional. The user ID of the item's author.    |✔|✔|✔|✔|✔|
+| time | integer | Optional. Creation date of the item, in [Unix Time](http://en.wikipedia.org/wiki/Unix_time).    |✔|✔|✔|✔|✔|
+| text | string | Optional. The comment, story or poll text.    ||✔|✔|✔||
 | dead | boolean | Optional. 'true' - if the item is dead. |✔|✔|✔|✔|✔|
-| parent | integer | Optional. The comment's parent: either another comment or the relevant story.   |||✔||✔|
+| parent | integer | Optional. The items parent. |||✔||✔|
 | poll | integer | Optional. The pollopt's associated poll. |||||✔|
-| kids | array[integer] | Optional. The ids of the item's comments, in ranked display order. |✔|✔|✔|✔|✔|
+| kids | array[integer] | Optional. The IDs of the item's comments, in ranked display order. |✔|✔|✔|✔|✔|
 | url | string | Optional. The URL. |✔|✔||||
 | score | integer | Optional. The score for a story, or the votes for a pollopt. |✔|||✔|✔|
-| title | string | Optional. The title of the story, poll or job. HTML.   |✔|✔||✔||
-| parts | array[integer] | Optional. A list of related pollopts, in display order.    ||||✔||
+| title | string | Optional. The title of the story, poll or job.    |✔|✔||✔||
+| parts | array[integer] | Optional. A list of related pollopts, in the display order.    ||||✔||
 | descendants | integer | Optional. The total comment count.    |✔|||✔||
 
 <h3>Example</h3>
@@ -97,7 +97,7 @@ Gets the information about the item (job, story, comment, poll or pollopt).
 
 <h2>Users</h2>
 
-Gets the current user's HakerNews profile. Only users that have public activity (comments or story submissions) on the site are available through the API.
+Returns the current user's HakerNews profile. Only users that have public activity (comments or story submissions) on the site are available through the API.
 
 <h3>HTTP request</h3>
 
@@ -107,7 +107,7 @@ Gets the current user's HakerNews profile. Only users that have public activity 
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-| user-id   | string | Required. The user's unique username. Case-sensitive. |
+| user-id   | string | Required. The user's unique ID. Case-sensitive. |
 
 <h3>Query parameters</h3>
 
@@ -135,12 +135,12 @@ Gets the current user's HakerNews profile. Only users that have public activity 
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-id | string | Required. The user's unique username. Case-sensitive.
+id | string | Required. The user's unique ID. Case-sensitive.
 delay | integer | Optional. Delay in minutes between a comment's creation and its visibility to other users. Max 10.
-created | number | Required. Creation date of the user, in [Unix Time](http://en.wikipedia.org/wiki/Unix_time).
+created | number | Required. Timestamp of the user creation, in [Unix Time](http://en.wikipedia.org/wiki/Unix_time).
 karma | number | Required. The user's karma. Can be negative.
-about | string | Optional. The user's self-description. HTML.
-submitted | array[integer] | Optional. List of the id stories, polls and comments, that user posted.
+about | string | Optional. The user's self-description.
+submitted | array[integer] | Optional. List of IDs of stories, polls and comments, that user posted.
 
 <h3>Example</h3>
 
@@ -163,7 +163,7 @@ submitted | array[integer] | Optional. List of the id stories, polls and comment
 
 <h2>Max Item ID</h2>
 
-Gets the current largest item id. You can walk backwards from here to discover all items.
+Returns the current largest item ID. You can walk backwards from here to discover all items.
 
 <h3>HTTP request</h3>
 
@@ -185,7 +185,7 @@ integer
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-id | integer | Required. The current largest item identifier.
+id | integer | Required. The current largest item ID.
 
 <h3>Example</h3>
 
@@ -203,7 +203,7 @@ HTTP Code: 200 - OK
 
 <h2>Top Stories</h2>
 
-Gets the 500 top stories posted on HakerNews (also contains jobs).
+Returns the 500 top stories posted on HakerNews (also contains jobs).
 
 <h3>HTTP request</h3>
 
@@ -233,7 +233,7 @@ Gets the 500 top stories posted on HakerNews (also contains jobs).
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-stories id | array[integer] | Required. Max 500 id.
+stories id | array[integer] | Required. Max 500 IDs.
 
 <h3>Example</h3>
 
@@ -259,7 +259,7 @@ stories id | array[integer] | Required. Max 500 id.
 
 <h2>New Stories</h2>
 
-Gets the 500 newest stories posted on HakerNews (https://news.ycombinator.com/newest).
+Returns the 500 newest stories posted on HakerNews (https://news.ycombinator.com/newest).
 
 <h3>HTTP request</h3>
 
@@ -289,7 +289,7 @@ Gets the 500 newest stories posted on HakerNews (https://news.ycombinator.com/ne
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-stories id | array[integer] | Required. Max 500 id.
+stories id | array[integer] | Required. Max 500 IDs.
 
 <h3>Example</h3>
 
@@ -315,7 +315,7 @@ stories id | array[integer] | Required. Max 500 id.
 
 <h2>Best Stories</h2>
 
-Gets the best stories posted on HakerNews.
+Returns the best stories posted on HakerNews (https://news.ycombinator.com/best).
 
 <h3>HTTP request</h3>
 
@@ -345,7 +345,7 @@ Gets the best stories posted on HakerNews.
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-stories id | array[integer] | Required. Max 500 id.
+stories id | array[integer] | Required. Max 500 IDs.
 
 <h3>Example</h3>
 
@@ -371,7 +371,7 @@ stories id | array[integer] | Required. Max 500 id.
 
 <h2>Ask Stories</h2>
 
-Gets the top 200 Ask stories posted on HakerNews (https://news.ycombinator.com/ask).
+Returns the top 200 Ask stories posted on HakerNews (https://news.ycombinator.com/ask).
 
 <h3>HTTP request</h3>
 
@@ -401,7 +401,7 @@ Gets the top 200 Ask stories posted on HakerNews (https://news.ycombinator.com/a
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-stories id | array[integer] | Required. Max 200 id.
+stories id | array[integer] | Required. Max 200 IDs.
 
 <h3>Example</h3>
 
@@ -427,7 +427,7 @@ stories id | array[integer] | Required. Max 200 id.
 
 <h2>Show Stories</h2>
 
-Gets the 200 Show stories posted on HakerNews https://news.ycombinator.com/show.
+Returns the 200 Show stories posted on HakerNews (https://news.ycombinator.com/show).
  
 <h3>HTTP request</h3>
 
@@ -457,7 +457,7 @@ Gets the 200 Show stories posted on HakerNews https://news.ycombinator.com/show.
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-stories id | array[integer]| Required. Max 200 id.
+stories id | array[integer]| Required. Max 200 IDs.
 
 <h3>Example</h3>
 
@@ -483,7 +483,7 @@ stories id | array[integer]| Required. Max 200 id.
 
 <h2>Job Stories</h2>
 
-Gets the latest 200 Jobs posted on HakerNews (https://news.ycombinator.com/jobs).
+Returns the latest 200 Jobs posted on HakerNews (https://news.ycombinator.com/jobs).
  
 <h3>HTTP request</h3>
 
@@ -513,7 +513,7 @@ Gets the latest 200 Jobs posted on HakerNews (https://news.ycombinator.com/jobs)
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-stories id | array[integer] | Required. Max 200 id.
+stories id | array[integer] | Required. Max 200 IDs.
 
 <h3>Example</h3>
 
@@ -539,7 +539,7 @@ stories id | array[integer] | Required. Max 200 id.
 
 <h2>Updates</h2>
 
-Gets item ids and users ids where there were changes.
+Returns item IDs and users IDs where there were changes.
 
 <h3>HTTP request</h3>
 
@@ -580,8 +580,8 @@ Gets item ids and users ids where there were changes.
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-items[] | array[integer] | Required. The list of HackerNews item ids where there were changes.
-profiles[] | array[string] | Required. The list of HackerNews users ids where there were changes. User id can only contain letters, digits, dashes and underscores, and could be between 2 and 15 characters long.
+items[] | array[integer] | Required. The list of HackerNews item IDs where there were changes.
+profiles[] | array[string] | Required. The list of HackerNews users IDs where there were changes. User ID can only contain letters, digits, dashes and underscores, and could be between 2 and 15 characters long.
 
 <h3>Example</h3>
 
