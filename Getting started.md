@@ -1,8 +1,8 @@
 <h1>Getting started</h1>
 
-You can use this API to get information from the site https://news.ycombinator.com/newest. For example, a list of the most popular stories or the title and URL of a story.
+You can use this API to get information from the site https://news.ycombinator.com. For example, a list of the most popular stories or the title and URL of a story.
 
-The examples in this guide are written in Python 3. You can use any programming language to work with the API.
+Examples in this guide are written in Python 3. You can use any programming language to work with the API.
 
 <h2>Step 1. The top stories</h2>
 
@@ -20,7 +20,7 @@ response = requests.request("GET", url, data=payload)
 
 print(response.text)
 ```
-In response, you will get an array with the ids of the top stories.
+In response, you will get an array with the IDs of the top stories.
 
 Example response:
 
@@ -35,13 +35,13 @@ Example response:
     24009672
 ]
 ```
-In addition to the top stories you can get the newest stories, the best stories, the top ask stories, the show stories and the latest jobs posted. All these methods return an array with the ids.
+In addition to the top stories you can get the newest stories, the best stories, the top ask stories, the show stories and the latest jobs posted. All these methods return an array with the IDs.
 
 <h2>Step 2. The information about the item</h2>
 
-The id is a very important and useful entity that binds everything together. Using the id, you can find the desired story. For example, let's see what is so special about the id 24050651 story because it is so popular.
+The ID is a very important and useful entity that binds everything together. Using the ID, you can find the desired story. For example, let's see what is so special about the ID 24050651 story because it is so popular.
 
-To do this, we need the [Items method](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#items). In this method, you need to set id.
+To do this, we need the [Items method](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#items). In this method, you need to set ID as a path parameter.
 
 Example request:
 
@@ -74,12 +74,12 @@ Example response:
 
 Hm, "Show HN: Visualize Graph Theory", sounds interesting!
 
-The HakerNews site has not only stories but also a job, comment, poll or pollopt. You can also get data about them using this method, just need change id.
+The HakerNews site has not only storis, but also: jobs, comments, polls or pollopts. You can also get data about them using this method, you just need to change the ID.
 
 <h2>Step 3. The information about the user</h2>
 
-To get data about a user, you need the [Users method](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#users). In this method, you need to set user id.
-For example, we can find out about the author of the most popular story. His user id is maxraz.
+To get data about a user, you need the [Users method](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#users). In this method, you need to set user ID.
+For example, we can find information about the author of the most popular story. His user ID is maxraz.
 
 Example request:
 
@@ -107,10 +107,10 @@ Example response:
 }
 
 ```
-Now we know that maxraz has good karma.
+Now we know that maxraz has a good karma.
 
 <b>What's next</b>
 
 * [Learn about API methods](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md)
 
-* [Find out about all the features](https://github.com/myafka/HackerNewsDocs/blob/master/Use%20cases.md)
+* [Read about another](https://github.com/myafka/HackerNewsDocs/blob/master/Use%20cases.md)
