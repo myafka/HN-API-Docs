@@ -9,9 +9,9 @@
 | [topstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#top-stories) | Gets the top stories posted on HakerNews. |
 | [newstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#new-stories) | Gets the newest stories posted on HakerNews. |
 | [beststories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#bests-stories) | Gets the best stories posted on HakerNews. |
-| [askstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#asks-stories) | Gets the top ask stories posted on HakerNews. |
-| [showstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#shows-stories) | Gets the show stories posted on HakerNews. |
-| [jobstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#job-stories) | Gets the latest jobs posted on HakerNews. |
+| [askstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#asks-stories) | Gets the top Ask stories posted on HakerNews. |
+| [showstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#shows-stories) | Gets the Show stories posted on HakerNews. |
+| [jobstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#job-stories) | Gets the latest Jobs posted on HakerNews. |
 | [updates](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#updates) | Gets item ids and users ids where there were changes. |
 
 
@@ -56,20 +56,20 @@ Gets the information about the item (job, story, comment, poll or pollopt).
 |Parameter    | Type | Description | Story | Job | Comment | Poll |Pollopt|
 | ------------- |-------------|--------|--------|--------|--------|--------|--------|
 | id   | integer | Required. The item's unique identifier.|✔|✔|✔|✔|✔|
-| deleted | boolean | Optional. Acceptable values: * 'true' if the item is deleted.  |✔|✔|✔|✔|✔|
-| type | string | Required. The type of item. One of "job", "story", "comment", "poll", or "pollopt".    |✔|✔|✔|✔|✔|
+| deleted | boolean | Optional. 'true' - if the item is deleted.  |✔|✔|✔|✔|✔|
+| type | string | Required. The type of item. Acceptable values: "job", "story", "comment", "poll", or "pollopt".    |✔|✔|✔|✔|✔|
 | by | string | Optional. The username of the item's author.    |✔|✔|✔|✔|✔|
 | time | integer | Optional. Creation date of the item, in Unix Time.    |✔|✔|✔|✔|✔|
 | text | string | Optional. The comment, story or poll text. HTML.    ||✔|✔|✔||
-| dead | boolean | Optional. true if the item is dead. |✔|✔|✔|✔|✔|
+| dead | boolean | Optional. 'true' - if the item is dead. |✔|✔|✔|✔|✔|
 | parent | integer | Optional. The comment's parent: either another comment or the relevant story.   |||✔||✔|
 | poll | integer | Optional. The pollopt's associated poll. |||||✔|
 | kids | array[integer] | Optional. The ids of the item's comments, in ranked display order. |✔|✔|✔|✔|✔|
-| url | string | Optional. The URL of the story. |✔|✔||||
-| score | integer | Optional. The story's score, or the votes for a pollopt. |✔|||✔|✔|
+| url | string | Optional. The URL. |✔|✔||||
+| score | integer | Optional. The score for a story, or the votes for a pollopt. |✔|||✔|✔|
 | title | string | Optional. The title of the story, poll or job. HTML.   |✔|✔||✔||
 | parts | array[integer] | Optional. A list of related pollopts, in display order.    ||||✔||
-| descendants | integer | Optional. In the case of stories or polls, the total comment count.    |✔|||✔||
+| descendants | integer | Optional. The total comment count.    |✔|||✔||
 
 <h3>Example</h3>
 
@@ -138,9 +138,9 @@ Gets the current user's HakerNews profile. Only users that have public activity 
 id | string | Required. The user's unique username. Case-sensitive.
 delay | integer | Optional. Delay in minutes between a comment's creation and its visibility to other users. Max 10.
 created | number | Required. Creation date of the user, in [Unix Time](http://en.wikipedia.org/wiki/Unix_time).
-karma | number | Required. The user's karma.
+karma | number | Required. The user's karma. Can be negative.
 about | string | Optional. The user's self-description. HTML.
-submitted | array[integer] | Optional. List of the user's stories, polls and comments.
+submitted | array[integer] | Optional. List of the id stories, polls and comments, that user posted.
 
 <h3>Example</h3>
 
@@ -163,7 +163,7 @@ submitted | array[integer] | Optional. List of the user's stories, polls and com
 
 <h2>Max Item ID</h2>
 
-Gets the current largest item id. You can walk backward from here to discover all items.
+Gets the current largest item id. You can walk backwards from here to discover all items.
 
 <h3>HTTP request</h3>
 
@@ -203,7 +203,7 @@ HTTP Code: 200 - OK
 
 <h2>Top Stories</h2>
 
-Gets the top ask stories posted on HakerNews (also contains jobs). Up to 500.
+Gets the 500 top stories posted on HakerNews (also contains jobs).
 
 <h3>HTTP request</h3>
 
@@ -259,7 +259,7 @@ stories id | array[integer] | Required. Max 500 id.
 
 <h2>New Stories</h2>
 
-Up to 500 top stories (also contains jobs).
+Gets the 500 newest stories posted on HakerNews (https://news.ycombinator.com/newest).
 
 <h3>HTTP request</h3>
 
@@ -371,7 +371,7 @@ stories id | array[integer] | Required. Max 500 id.
 
 <h2>Ask Stories</h2>
 
-Up to 200 of the latest Ask stories
+Gets the top 200 Ask stories posted on HakerNews (https://news.ycombinator.com/ask).
 
 <h3>HTTP request</h3>
 
@@ -427,7 +427,7 @@ stories id | array[integer] | Required. Max 200 id.
 
 <h2>Show Stories</h2>
 
-Gets the show stories posted on HakerNews. Up to 200.
+Gets the 200 Show stories posted on HakerNews https://news.ycombinator.com/show.
  
 <h3>HTTP request</h3>
 
@@ -483,7 +483,7 @@ stories id | array[integer]| Required. Max 200 id.
 
 <h2>Job Stories</h2>
 
-Gets the latest jobs posted on HakerNews. Up to 200.
+Gets the latest 200 Jobs posted on HakerNews (https://news.ycombinator.com/jobs).
  
 <h3>HTTP request</h3>
 
@@ -537,7 +537,7 @@ stories id | array[integer] | Required. Max 200 id.
 ]
 ```
 
-<h2>Updeites</h2>
+<h2>Updates</h2>
 
 Gets item ids and users ids where there were changes.
 
