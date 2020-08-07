@@ -26,13 +26,7 @@ Example response:
 
 ```
 [
-    24050651,
-    24049428,
-    24049593,
-    24050691,
-    24049349,
-    ...
-    24009672
+    24050651, 24049428, 24049593, 24050691, 24049349, ..., 24009672
 ]
 ```
 In addition to the top stories you can get the newest stories, the best stories, the top ask stories, the show stories and the latest jobs posted. All these methods return an array with the IDs.
@@ -107,10 +101,10 @@ Example response:
 }
 
 ```
-Now we know that maxraz has a good karma.
+Now we know that maxraz has a good karma and he has many other stories. If you are interested, you can see what they are about using the method from Step 2.
 
 <b>What's next</b>
 
 * [Learn about API methods](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md)
 
-* [Read about another](https://github.com/myafka/HackerNewsDocs/blob/master/Use%20cases.md)
+* [Read about other use cases](https://github.com/myafka/HackerNewsDocs/blob/master/Use%20cases.md)
