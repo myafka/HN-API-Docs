@@ -1,5 +1,7 @@
 <h1>Methods</h1>
 
+This section contains description of HackerNews API. If you don't know anything about site HackerNews, at first read the article [About](https://github.com/myafka/Test/blob/master/About.md).
+
 
 | Method      | Description |
 | ------------- |-------------|
