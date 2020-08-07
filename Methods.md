@@ -33,7 +33,7 @@ Returns the information about the item (job, story, comment, poll or pollopt).
 
 |Parameter | Type | Description |
 | ------------- |-------------|--------|
-| print | string | Optional. Defaul is pretty. |
+| print | string | Optional. 'pretty'- returns the data in a human-readable format. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data). |
 
 <h3>Response</h3>
 
@@ -113,7 +113,7 @@ Returns the current user's HakerNews profile. Only users that have public activi
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-| print   | string | Optional. Defaul is pretty. |
+| print   | string | Optional. 'pretty'- returns the data in a human-readable format. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data). |
 
 <h3>Response</h3>
 
@@ -173,7 +173,7 @@ Returns the current largest item ID. You can walk backwards from here to discove
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-| print   | string | Optional. Defaul is pretty. |
+| print   | string | Optional. 'pretty'- returns the data in a human-readable format. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data). |
 
 <h3>Response</h3>
 
@@ -213,7 +213,7 @@ Returns the 500 top stories posted on HakerNews (also contains jobs).
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-| print   | string | Optional. Defaul is pretty. |
+| print   | string | Optional. 'pretty'- returns the data in a human-readable format. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data). |
 
 <h3>Response</h3>
 
@@ -269,7 +269,7 @@ Returns the 500 newest stories posted on HakerNews (https://news.ycombinator.com
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-| print   | string | Optional. Defaul is pretty. |
+| print   | string | Optional. 'pretty'- returns the data in a human-readable format. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data). |
 
 <h3>Response</h3>
 
@@ -325,7 +325,7 @@ Returns the best stories posted on HakerNews (https://news.ycombinator.com/best)
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-| print   | string | Optional. Defaul is pretty. |
+| print   | string | Optional. 'pretty'- returns the data in a human-readable format. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data). |
 
 <h3>Response</h3>
 
@@ -381,7 +381,7 @@ Returns the top 200 Ask stories posted on HakerNews (https://news.ycombinator.co
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-| print   | string | Optional. Defaul is pretty. |
+| print   | string | Optional. 'pretty'- returns the data in a human-readable format. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data). |
 
 <h3>Response</h3>
 
@@ -437,7 +437,7 @@ Returns the 200 Show stories posted on HakerNews (https://news.ycombinator.com/s
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-| print   | string | Optional. Defaul is pretty. |
+| print   | string | Optional. 'pretty'- returns the data in a human-readable format. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data). |
 
 <h3>Response</h3>
 
@@ -493,7 +493,7 @@ Returns the latest 200 Jobs posted on HakerNews (https://news.ycombinator.com/jo
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-| print   | string | Optional. Defaul is pretty. |
+| print   | string | Optional. 'pretty'- returns the data in a human-readable format. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data). |
 
 <h3>Response</h3>
 
@@ -549,7 +549,7 @@ Returns item IDs and users IDs where there were changes.
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
-| print   | string | Optional. Defaul is pretty. |
+| print   | string | Optional. 'pretty'- returns the data in a human-readable format. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data). |
 
 <h3>Response</h3>
 
