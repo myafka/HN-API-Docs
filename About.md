@@ -12,7 +12,7 @@ The site has several items of content:
 * poll - a survey with set answer options, each answer is pollopt
 
 The site has several collections of stories: 
-* top stories (https://news.ycombinator.com/news) - best new stories  
+* top stories (https://news.ycombinator.com/news) - top of new stories  
 * newest stories (https://news.ycombinator.com/newest) - recently published stories 
 * best stories (https://news.ycombinator.com/top)- best of the best stories 
 
