@@ -60,7 +60,7 @@ Returns the information about the item (job, story, comment, poll or pollopt).
 | type | string | Required. The type of item. Possible values: "job", "story", "comment", "poll", or "pollopt".    |✔|✔|✔|✔|✔|
 | by | string | Optional. The user ID of the item's author.    |✔|✔|✔|✔|✔|
 | time | integer | Optional. Creation date of the item, in [Unix Time](http://en.wikipedia.org/wiki/Unix_time).    |✔|✔|✔|✔|✔|
-| text | string | Optional. The comment, story or poll text.    ||✔|✔|✔||
+| text | string | Optional. The comment, story or poll text.    |✔|✔|✔|✔|✔|
 | dead | boolean | Optional. 'true' - if the item is dead. |✔|✔|✔|✔|✔|
 | parent | integer | Optional. The items parent. |||✔||✔|
 | poll | integer | Optional. The pollopt's associated poll. |||||✔|
