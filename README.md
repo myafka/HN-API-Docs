@@ -9,7 +9,7 @@ The HackerNews API is used for getting information from the site [HackerNews](ht
 
 * Learn about API [methods](https://github.com/myafka/HN-API-Docs/blob/master/README.md#Methods)
 
-* Read about other [use cases](https://github.com/myafka/HN-API-Docs/blob/master/README.md#Use%20cases)
+* Read about other [use cases](https://github.com/myafka/HN-API-Docs/blob/master/README.md#use-cases)
 
 
 <h1>Getting started</h1>
@@ -119,9 +119,9 @@ Now we know that maxraz has a good karma and he has many other stories. If you a
 
 <b>What's next</b>
 
-* [Learn about API methods](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md)
+* [Learn about API methods](https://github.com/myafka/HN-API-Docs/blob/master/README.md#Methods)
 
-* [Read about other use cases](https://github.com/myafka/HackerNewsDocs/blob/master/Use%20cases.md)
+* [Read about other use cases](https://github.com/myafka/HN-API-Docs/blob/master/README.md#use-cases)
 
 
 <h1>About Hacker News</h1>
@@ -149,16 +149,16 @@ This section contains description of HackerNews API. If you don't know anything 
 
 | Method      | Description |
 | ------------- |-------------|
-| [items](https://github.com/myafka/HN-API-Docs#Items) | Returns the information about the item (job, story, comment, poll or pollopt). |
-| [users](https://github.com/myafka/HN-API-Docs#Users) | Returns the current user's HakerNews profile. |
-| [maxitem](https://github.com/myafka/HN-API-Docs#max-item-id) | Returns the current largest item ID. |
-| [topstories](https://github.com/myafka/HN-API-Docs#top-stories) | Returns the top of recent stories posted on HakerNews. |
-| [newstories](https://github.com/myafka/HN-API-Docs#new-stories) | Returns the newest stories posted on HakerNews. |
-| [beststories](https://github.com/myafka/HN-API-Docs#bests-stories) | Returns the best stories posted on HakerNews. |
-| [askstories](https://github.com/myafka/HN-API-Docs#asks-stories) | Returns the ask stories posted on HakerNews. |
-| [showstories](https://github.com/myafka/HN-API-Docs#shows-stories) | Returns the show stories posted on HakerNews. |
-| [jobstories](https://github.com/myafka/HN-API-Docs#job-stories) | Returns the latest jobs posted on HakerNews. |
-| [updates](https://github.com/myafka/HN-API-Docs#updates) | Returns item IDs and users IDs where there were changes. |
+| [items](https://github.com/myafka/HN-API-Docs/blob/master/README.md#items) | Returns the information about the item (job, story, comment, poll or pollopt). |
+| [users](https://github.com/myafka/HN-API-Docs/blob/master/README.md#Users) | Returns the current user's HakerNews profile. |
+| [maxitem](https://github.com/myafka/HN-API-Docs/blob/master/README.md#max-item-id) | Returns the current largest item ID. |
+| [topstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#top-stories) | Returns the top of recent stories posted on HakerNews. |
+| [newstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#new-stories) | Returns the newest stories posted on HakerNews. |
+| [beststories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#bests-stories) | Returns the best stories posted on HakerNews. |
+| [askstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#asks-stories) | Returns the ask stories posted on HakerNews. |
+| [showstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#shows-stories) | Returns the show stories posted on HakerNews. |
+| [jobstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#job-stories) | Returns the latest jobs posted on HakerNews. |
+| [updates](https://github.com/myafka/HN-API-Docs/blob/master/README.md#updates) | Returns item IDs and users IDs where there were changes. |
 
 
 <h2>Items</h2>
@@ -765,11 +765,11 @@ profiles[] | array[string] | Required. The list of HackerNews users IDs where th
 
 This section contains examples of API usage. The examples in this guide are written in Python 3. You can use any programming language to work with the API.
 
-If you are a new to this API, we recommend starting with [Getting started](https://github.com/myafka/HN-API-Docs#getting-started).
+If you are a new to this API, we recommend starting with [Getting started](https://github.com/myafka/HN-API-Docs/blob/master/README.md#getting-started).
 
 <h2>Fetch 50 stories</h2>
 
-Imagine that you need to select 50 new stories. Since the [New Stories method](https://github.com/myafka/HN-API-Docs#new-stories) returns 500 stories, you will need to take addional steps.
+Imagine that you need to select 50 new stories. Since the [New Stories method](https://github.com/myafka/HN-API-Docs/blob/master/README.md#new-stories) returns 500 stories, you will need to take addional steps.
 
 Example request:
 
