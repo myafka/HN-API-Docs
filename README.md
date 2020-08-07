@@ -5,7 +5,7 @@ The HackerNews API is used for getting information from the site [HackerNews](ht
 
 * [Get started](https://github.com/myafka/HN-API-Docs/blob/master/README.md#getting-started)
 
-* Get to know [about site]((https://github.com/myafka/HN-API-Docs/blob/master/README.md#about) Hacker News
+* Get to know [about site](https://github.com/myafka/HN-API-Docs/blob/master/README.md#about) Hacker News
 
 * Learn about API [methods](https://github.com/myafka/HN-API-Docs/blob/master/README.md#Methods)
 
