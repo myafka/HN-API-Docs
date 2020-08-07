@@ -156,7 +156,7 @@ This section contains description of HackerNews API. If you don't know anything 
 | [newstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#new-stories) | Returns the newest stories posted on HakerNews. |
 | [beststories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#best-stories) | Returns the best stories posted on HakerNews. |
 | [askstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#ask-stories) | Returns the ask stories posted on HakerNews. |
-| [showstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#ask-stories) | Returns the show stories posted on HakerNews. |
+| [showstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#show-stories) | Returns the show stories posted on HakerNews. |
 | [jobstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#job-stories) | Returns the latest jobs posted on HakerNews. |
 | [updates](https://github.com/myafka/HN-API-Docs/blob/master/README.md#updates) | Returns item IDs and users IDs where there were changes. |
 
@@ -167,7 +167,7 @@ Returns the information about the item (job, story, comment, poll or pollopt).
 
 <h3>HTTP request</h3>
 
-`GET https://hacker-news.firebaseio.com/v0/item/{id}.json?print=pretty`
+`GET https://hacker-news.firebaseio.com/v0/item/{id}.json`
 
 <h3>Path parameters</h3>
 
@@ -177,9 +177,7 @@ Returns the information about the item (job, story, comment, poll or pollopt).
 
 <h3>Query parameters</h3>
 
-|Parameter | Type | Description |
-| ------------- |-------------|--------|
-| print | string | Optional. 'pretty'- returns the data in a human-readable format. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data). |
+Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data).
 
 <h3>Response</h3>
 
@@ -221,7 +219,7 @@ Returns the information about the item (job, story, comment, poll or pollopt).
 
 <h4>Request</h4>
 
-  `GET https://hacker-news.firebaseio.com/v0/item/88.json?print=pretty`
+  `GET https://hacker-news.firebaseio.com/v0/item/88.json`
   
 <h4>Response</h4>
 
@@ -247,7 +245,7 @@ Returns the current user's HakerNews profile. Only users that have public activi
 
 <h3>HTTP request</h3>
 
-`GET https://hacker-news.firebaseio.com/v0/user/{user-id}.json?print=pretty`
+`GET https://hacker-news.firebaseio.com/v0/user/{user-id}.json`
 
 <h3>Path parameters</h3>
 
@@ -257,9 +255,7 @@ Returns the current user's HakerNews profile. Only users that have public activi
 
 <h3>Query parameters</h3>
 
-|Parameter    | Type | Description |
-| ------------- |-------------|--------|
-| print   | string | Optional. 'pretty'- returns the data in a human-readable format. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data). |
+Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data).
 
 <h3>Response</h3>
 
@@ -292,7 +288,7 @@ submitted | array[integer] | Optional. List of IDs of stories, polls and comment
 
 <h4>Request</h4>
 
-`GET https://hacker-news.firebaseio.com/v0/user/myafka.json?print=pretty`
+`GET https://hacker-news.firebaseio.com/v0/user/myafka.json`
   
 <h4>Response</h4>
 
@@ -313,13 +309,11 @@ Returns the current largest item ID. You can walk backwards from here to discove
 
 <h3>HTTP request</h3>
 
-`GET https://hacker-news.firebaseio.com/v0/maxitem.json?print=pretty`
+`GET https://hacker-news.firebaseio.com/v0/maxitem.json`
 
 <h3>Query parameters</h3>
 
-|Parameter    | Type | Description |
-| ------------- |-------------|--------|
-| print   | string | Optional. 'pretty'- returns the data in a human-readable format. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data). |
+Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data).
 
 <h3>Response</h3>
 
@@ -337,7 +331,7 @@ id | integer | Required. The current largest item ID.
 
 <h4>Request</h4>
 
-`GET https://hacker-news.firebaseio.com/v0/maxitem.json?print=pretty`
+`GET https://hacker-news.firebaseio.com/v0/maxitem.json`
   
 <h4>Response</h4>
 
@@ -353,13 +347,11 @@ Returns the top of 500 recent stories posted on HakerNews (also contains jobs).
 
 <h3>HTTP request</h3>
 
-`GET https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty`
+`GET https://hacker-news.firebaseio.com/v0/topstories.json`
 
 <h3>Query parameters</h3>
 
-|Parameter    | Type | Description |
-| ------------- |-------------|--------|
-| print   | string | Optional. 'pretty'- returns the data in a human-readable format. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data). |
+Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data).
 
 <h3>Response</h3>
 
@@ -385,7 +377,7 @@ stories id | array[integer] | Required. Max 500 IDs.
 
 <h4>Request</h4>
 
-`GET https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty`
+`GET https://hacker-news.firebaseio.com/v0/topstories.json`
   
 <h4>Response</h4>
 
@@ -409,13 +401,11 @@ Returns the 500 newest stories posted on HakerNews (https://news.ycombinator.com
 
 <h3>HTTP request</h3>
 
-`GET https://hacker-news.firebaseio.com/v0/newstories.json?print=pretty`
+`GET https://hacker-news.firebaseio.com/v0/newstories.json`
 
 <h3>Query parameters</h3>
 
-|Parameter    | Type | Description |
-| ------------- |-------------|--------|
-| print   | string | Optional. 'pretty'- returns the data in a human-readable format. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data). |
+Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data).
 
 <h3>Response</h3>
 
@@ -441,7 +431,7 @@ stories id | array[integer] | Required. Max 500 IDs.
 
 <h4>Request</h4>
 
-`GET https://hacker-news.firebaseio.com/v0/newstories.json?print=pretty`
+`GET https://hacker-news.firebaseio.com/v0/newstories.json`
   
 <h4>Response</h4>
 
@@ -465,13 +455,11 @@ Returns the best stories posted on HakerNews (https://news.ycombinator.com/best)
 
 <h3>HTTP request</h3>
 
-`GET https://hacker-news.firebaseio.com/v0/besttories.json?print=pretty`
+`GET https://hacker-news.firebaseio.com/v0/besttories.json`
 
 <h3>Query parameters</h3>
 
-|Parameter    | Type | Description |
-| ------------- |-------------|--------|
-| print   | string | Optional. 'pretty'- returns the data in a human-readable format. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data). |
+Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data).
 
 <h3>Response</h3>
 
@@ -497,7 +485,7 @@ stories id | array[integer] | Required. Max 500 IDs.
 
 <h4>Request</h4>
 
-`GET https://hacker-news.firebaseio.com/v0/besttories.json?print=pretty`
+`GET https://hacker-news.firebaseio.com/v0/besttories.json`
   
 <h4>Response</h4>
 
@@ -521,13 +509,11 @@ Returns the 200 ask stories posted on HakerNews (https://news.ycombinator.com/as
 
 <h3>HTTP request</h3>
 
-`GET https://hacker-news.firebaseio.com/v0/askstories.json?print=pretty`
+`GET https://hacker-news.firebaseio.com/v0/askstories.json`
 
 <h3>Query parameters</h3>
 
-|Parameter    | Type | Description |
-| ------------- |-------------|--------|
-| print   | string | Optional. 'pretty'- returns the data in a human-readable format. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data). |
+Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data).
 
 <h3>Response</h3>
 
@@ -553,7 +539,7 @@ stories id | array[integer] | Required. Max 200 IDs.
 
 <h4>Request</h4>
 
-`GET https://hacker-news.firebaseio.com/v0/askstories.json?print=pretty`
+`GET https://hacker-news.firebaseio.com/v0/askstories.json`
   
 <h4>Response</h4>
 
@@ -577,13 +563,11 @@ Returns the 200 show stories posted on HakerNews (https://news.ycombinator.com/s
  
 <h3>HTTP request</h3>
 
-`GET https://hacker-news.firebaseio.com/v0/showstories.json?print=pretty`
+`GET https://hacker-news.firebaseio.com/v0/showstories.json`
 
 <h3>Query parameters</h3>
 
-|Parameter    | Type | Description |
-| ------------- |-------------|--------|
-| print   | string | Optional. 'pretty'- returns the data in a human-readable format. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data). |
+Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data).
 
 <h3>Response</h3>
 
@@ -609,7 +593,7 @@ stories id | array[integer]| Required. Max 200 IDs.
 
 <h4>Request</h4>
 
-`GET https://hacker-news.firebaseio.com/v0/showstories.json?print=pretty`
+`GET https://hacker-news.firebaseio.com/v0/showstories.json`
   
 <h4>Response</h4>
 
@@ -633,13 +617,11 @@ Returns the 200 jobs posted on HakerNews (https://news.ycombinator.com/jobs).
  
 <h3>HTTP request</h3>
 
-`GET https://hacker-news.firebaseio.com/v0/jobstories.json?print=pretty`
+`GET https://hacker-news.firebaseio.com/v0/jobstories.json`
 
 <h3>Query parameters</h3>
 
-|Parameter    | Type | Description |
-| ------------- |-------------|--------|
-| print   | string | Optional. 'pretty'- returns the data in a human-readable format. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data). |
+Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data).
 
 <h3>Response</h3>
 
@@ -665,7 +647,7 @@ stories id | array[integer] | Required. Max 200 IDs.
 
 <h4>Request</h4>
 
-`GET https://hacker-news.firebaseio.com/v0/jobstories.json?print=pretty`
+`GET https://hacker-news.firebaseio.com/v0/jobstories.json`
   
 <h4>Response</h4>
 
@@ -689,13 +671,11 @@ Returns item IDs and users IDs where there were changes.
 
 <h3>HTTP request</h3>
 
-`GET https://hacker-news.firebaseio.com/v0/updates.json?print=pretty`
+`GET https://hacker-news.firebaseio.com/v0/updates.json`
 
 <h3>Query parameters</h3>
 
-|Parameter    | Type | Description |
-| ------------- |-------------|--------|
-| print   | string | Optional. 'pretty'- returns the data in a human-readable format. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data). |
+Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data).
 
 <h3>Response</h3>
 
@@ -733,7 +713,7 @@ profiles[] | array[string] | Required. The list of HackerNews users IDs where th
 
 <h4>Request</h4>
 
-`GET https://hacker-news.firebaseio.com/v0/updates.json?print=pretty`
+`GET https://hacker-news.firebaseio.com/v0/updates.json`
   
 <h4>Response</h4>
 
