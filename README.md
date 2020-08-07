@@ -49,7 +49,7 @@ In addition to the top stories you can get the newest stories, the best stories,
 
 The ID is a very important and useful entity that binds everything together. Using the ID, you can find the desired story. For example, let's see what is so special about the ID 24050651 story because it is so popular.
 
-To do this, we need the [Items method](https://github.com/myafka/HN-API-Docs/blob/master/README.md#items). In this method, you need to set ID as a path parameter.
+To do this, we need the [Item method](https://github.com/myafka/HN-API-Docs/blob/master/README.md#item). In this method, you need to set ID as a path parameter.
 
 Example request:
 
@@ -86,7 +86,7 @@ The HakerNews site has not only storis, but also: jobs, comments, polls or pollo
 
 <h2>Step 3. The information about the user</h2>
 
-To get data about a user, you need the [Users method](https://github.com/myafka/HN-API-Docs/blob/master/README.md#users). In this method, you need to set user ID.
+To get data about a user, you need the [User method](https://github.com/myafka/HN-API-Docs/blob/master/README.md#user). In this method, you need to set user ID.
 For example, we can find information about the author of the most popular story. His user ID is maxraz.
 
 Example request:
@@ -149,8 +149,8 @@ This section contains description of HackerNews API. If you don't know anything 
 
 | Method      | Description |
 | ------------- |-------------|
-| [items](https://github.com/myafka/HN-API-Docs/blob/master/README.md#items) | Returns the information about the item (job, story, comment, poll or pollopt). |
-| [users](https://github.com/myafka/HN-API-Docs/blob/master/README.md#Users) | Returns the current user's HakerNews profile. |
+| [item](https://github.com/myafka/HN-API-Docs/blob/master/README.md#item) | Returns the information about the item (job, story, comment, poll or pollopt). |
+| [user](https://github.com/myafka/HN-API-Docs/blob/master/README.md#User) | Returns the current user's HakerNews profile. |
 | [maxitem](https://github.com/myafka/HN-API-Docs/blob/master/README.md#max-item-id) | Returns the current largest item ID. |
 | [topstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#top-stories) | Returns the top of recent stories posted on HakerNews. |
 | [newstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#new-stories) | Returns the newest stories posted on HakerNews. |
@@ -161,7 +161,7 @@ This section contains description of HackerNews API. If you don't know anything 
 | [updates](https://github.com/myafka/HN-API-Docs/blob/master/README.md#updates) | Returns item IDs and users IDs where there were changes. |
 
 
-<h2>Items</h2>
+<h2>Item</h2>
 
 Returns the information about the item (job, story, comment, poll or pollopt).
 
@@ -239,7 +239,7 @@ Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/
 }
 ```
 
-<h2>Users</h2>
+<h2>User</h2>
 
 Returns the current user's HakerNews profile. Only users that have public activity (comments or story submissions) on the site are available through the API.
 
