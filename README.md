@@ -3,7 +3,7 @@
 The HackerNews API is used for getting information from the site [HackerNews](https://news.ycombinator.com). The API was built using Firebase. 
 
 
-* [Get started](https://github.com/myafka/HackerNewsDocs/blob/master/Getting%20started.md)
+* [Get started](https://github.com/myafka/Test/blob/master/Getting%20started.md)
 
 * Get to know [about site] Hacker News
 
