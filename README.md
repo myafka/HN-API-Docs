@@ -20,7 +20,7 @@ Examples in this guide are written in Python 3. You can use any programming lang
 
 <h2>Step 1. The top stories</h2>
 
-Let's find out what stories are in the top right now. To do this, we need the [Top Stories method](https://github.com/myafka/HN-API-Docs#top-stories). You don't need to set path parameters in this method.
+Let's find out what stories are in the top right now. To do this, we need the [Top Stories method](https://github.com/myafka/HN-API-Docs/blob/master/README.md#top-stories). You don't need to set path parameters in this method.
  
 Example request:
 
@@ -49,7 +49,7 @@ In addition to the top stories you can get the newest stories, the best stories,
 
 The ID is a very important and useful entity that binds everything together. Using the ID, you can find the desired story. For example, let's see what is so special about the ID 24050651 story because it is so popular.
 
-To do this, we need the [Items method](https://github.com/myafka/HN-API-Docs#items). In this method, you need to set ID as a path parameter.
+To do this, we need the [Items method](https://github.com/myafka/HN-API-Docs/blob/master/README.md#items). In this method, you need to set ID as a path parameter.
 
 Example request:
 
@@ -86,7 +86,7 @@ The HakerNews site has not only storis, but also: jobs, comments, polls or pollo
 
 <h2>Step 3. The information about the user</h2>
 
-To get data about a user, you need the [Users method](https://github.com/myafka/HN-API-Docs#users). In this method, you need to set user ID.
+To get data about a user, you need the [Users method](https://github.com/myafka/HN-API-Docs/blob/master/README.md#users). In this method, you need to set user ID.
 For example, we can find information about the author of the most popular story. His user ID is maxraz.
 
 Example request:
