@@ -2,11 +2,11 @@
 
 This section contains examples of API usage. The examples in this guide are written in Python 3. You can use any programming language to work with the API.
 
-If you are a newbie to working with an API, we recommend starting with [Getting started](https://github.com/myafka/HackerNewsDocs/blob/master/Getting%20started.md).
+If you are a new to this API, we recommend starting with [Getting started](https://github.com/myafka/HackerNewsDocs/blob/master/Getting%20started.md).
 
 <h2>Fetch 50 stories</h2>
 
-Imagine that you need to select 50 new stories. Since the [New Stories method](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#new-stories) returns 500 stories, you will need to upgrade it.
+Imagine that you need to select 50 new stories. Since the [New Stories method](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#new-stories) returns 500 stories, you will need to take addional steps.
 
 Example request:
 
@@ -26,7 +26,7 @@ cut_data = data[:50]
 
 print(cut_data)
 ```
-In response, you will get an array with 50 ids of the stories.
+In response, you will get an array of 50 IDs of the stories.
 
 ```
 [
@@ -37,7 +37,7 @@ In response, you will get an array with 50 ids of the stories.
   
 <h2>Sorted stories</h2>
 
-In this example, we order stories in a descendent order, sorted by score.
+In this example, we order stories in a descending order, sorted by score.
 
 Example request:
  
@@ -83,7 +83,7 @@ In response, you will get a sorted array.
 {'by': 'sumitg12', 'descendants': 0, 'id': 24065308, 'score': 1, 'time': 1596659900, 'title': 'Auto Labeling for Images', 'type': 'story', 'url': 'https://developer.ibm.com/technologies/artificial-intelligence/blogs/ibm-cloud-annotations-tool-eases-the-process-of-ai-data-labeling/'}]
 ```
 
-Well done! The stories "Why there’s so little left of the early internet" has the bigest score.
+Well done! The story "Why there’s so little left of the early internet" has the bigest score.
 
 <h2>Create a mobile app</h2>
 
@@ -91,4 +91,4 @@ Our API uses Firebase. Firebase serves as a database that changes in real-time a
 
 You can use Firebase SDK to create a mobile app for Android and iOS. To get started, visit the [Firebase setup instructions](https://firebase.google.com/docs/).
 
-Here is an example of a ready-made [Swift app](https://github.com/timshim/Hackery).
+Here is an example of a [Swift app](https://github.com/timshim/Hackery).
