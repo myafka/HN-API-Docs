@@ -3,13 +3,13 @@
 The HackerNews API is used for getting information from the site [HackerNews](https://news.ycombinator.com). The API was built using Firebase. 
 
 
-* [Get started](https://github.com/myafka/Test/blob/master/Getting%20started.md)
+* [Get started](https://github.com/myafka/HN-API-Docs/blob/master/README.md#getting-started)
 
-* Get to know [about site] Hacker News
+* Get to know [about site]((https://github.com/myafka/HN-API-Docs/blob/master/README.md#about) Hacker News
 
-* Learn about API [methods](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md)
+* Learn about API [methods](https://github.com/myafka/HN-API-Docs/blob/master/README.md#Methods)
 
-* Read about other [use cases](https://github.com/myafka/HackerNewsDocs/blob/master/Use%20cases.md)
+* Read about other [use cases](https://github.com/myafka/HN-API-Docs/blob/master/README.md#Use%20cases)
 
 
 <h1>Getting started</h1>
@@ -20,7 +20,7 @@ Examples in this guide are written in Python 3. You can use any programming lang
 
 <h2>Step 1. The top stories</h2>
 
-Let's find out what stories are in the top right now. To do this, we need the [Top Stories method](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#top-stories). You don't need to set path parameters in this method.
+Let's find out what stories are in the top right now. To do this, we need the [Top Stories method](https://github.com/myafka/HN-API-Docs#top-stories). You don't need to set path parameters in this method.
  
 Example request:
 
@@ -49,7 +49,7 @@ In addition to the top stories you can get the newest stories, the best stories,
 
 The ID is a very important and useful entity that binds everything together. Using the ID, you can find the desired story. For example, let's see what is so special about the ID 24050651 story because it is so popular.
 
-To do this, we need the [Items method](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#items). In this method, you need to set ID as a path parameter.
+To do this, we need the [Items method](https://github.com/myafka/HN-API-Docs#items). In this method, you need to set ID as a path parameter.
 
 Example request:
 
@@ -86,7 +86,7 @@ The HakerNews site has not only storis, but also: jobs, comments, polls or pollo
 
 <h2>Step 3. The information about the user</h2>
 
-To get data about a user, you need the [Users method](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#users). In this method, you need to set user ID.
+To get data about a user, you need the [Users method](https://github.com/myafka/HN-API-Docs#users). In this method, you need to set user ID.
 For example, we can find information about the author of the most popular story. His user ID is maxraz.
 
 Example request:
@@ -149,16 +149,16 @@ This section contains description of HackerNews API. If you don't know anything 
 
 | Method      | Description |
 | ------------- |-------------|
-| [items](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#Items) | Returns the information about the item (job, story, comment, poll or pollopt). |
-| [users](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#Users) | Returns the current user's HakerNews profile. |
-| [maxitem](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#max-item-id) | Returns the current largest item ID. |
-| [topstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#top-stories) | Returns the top of recent stories posted on HakerNews. |
-| [newstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#new-stories) | Returns the newest stories posted on HakerNews. |
-| [beststories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#bests-stories) | Returns the best stories posted on HakerNews. |
-| [askstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#asks-stories) | Returns the ask stories posted on HakerNews. |
-| [showstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#shows-stories) | Returns the show stories posted on HakerNews. |
-| [jobstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#job-stories) | Returns the latest jobs posted on HakerNews. |
-| [updates](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#updates) | Returns item IDs and users IDs where there were changes. |
+| [items](https://github.com/myafka/HN-API-Docs#Items) | Returns the information about the item (job, story, comment, poll or pollopt). |
+| [users](https://github.com/myafka/HN-API-Docs#Users) | Returns the current user's HakerNews profile. |
+| [maxitem](https://github.com/myafka/HN-API-Docs#max-item-id) | Returns the current largest item ID. |
+| [topstories](https://github.com/myafka/HN-API-Docs#top-stories) | Returns the top of recent stories posted on HakerNews. |
+| [newstories](https://github.com/myafka/HN-API-Docs#new-stories) | Returns the newest stories posted on HakerNews. |
+| [beststories](https://github.com/myafka/HN-API-Docs#bests-stories) | Returns the best stories posted on HakerNews. |
+| [askstories](https://github.com/myafka/HN-API-Docs#asks-stories) | Returns the ask stories posted on HakerNews. |
+| [showstories](https://github.com/myafka/HN-API-Docs#shows-stories) | Returns the show stories posted on HakerNews. |
+| [jobstories](https://github.com/myafka/HN-API-Docs#job-stories) | Returns the latest jobs posted on HakerNews. |
+| [updates](https://github.com/myafka/HN-API-Docs#updates) | Returns item IDs and users IDs where there were changes. |
 
 
 <h2>Items</h2>
@@ -765,11 +765,11 @@ profiles[] | array[string] | Required. The list of HackerNews users IDs where th
 
 This section contains examples of API usage. The examples in this guide are written in Python 3. You can use any programming language to work with the API.
 
-If you are a new to this API, we recommend starting with [Getting started](https://github.com/myafka/HackerNewsDocs/blob/master/Getting%20started.md).
+If you are a new to this API, we recommend starting with [Getting started](https://github.com/myafka/HN-API-Docs#getting-started).
 
 <h2>Fetch 50 stories</h2>
 
-Imagine that you need to select 50 new stories. Since the [New Stories method](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#new-stories) returns 500 stories, you will need to take addional steps.
+Imagine that you need to select 50 new stories. Since the [New Stories method](https://github.com/myafka/HN-API-Docs#new-stories) returns 500 stories, you will need to take addional steps.
 
 Example request:
 
