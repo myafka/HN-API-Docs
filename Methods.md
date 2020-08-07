@@ -6,12 +6,12 @@
 | [items](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#Items) | Returns the information about the item (job, story, comment, poll or pollopt). |
 | [users](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#Users) | Returns the current user's HakerNews profile. |
 | [maxitem](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#max-item-id) | Returns the current largest item ID. |
-| [topstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#top-stories) | Returns the top stories posted on HakerNews. |
+| [topstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#top-stories) | Returns the top of new stories posted on HakerNews. |
 | [newstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#new-stories) | Returns the newest stories posted on HakerNews. |
 | [beststories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#bests-stories) | Returns the best stories posted on HakerNews. |
-| [askstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#asks-stories) | Returns the top Ask stories posted on HakerNews. |
-| [showstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#shows-stories) | Returns the Show stories posted on HakerNews. |
-| [jobstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#job-stories) | Returns the latest Jobs posted on HakerNews. |
+| [askstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#asks-stories) | Returns the ask stories posted on HakerNews. |
+| [showstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#shows-stories) | Returns the show stories posted on HakerNews. |
+| [jobstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#job-stories) | Returns the latest jobs posted on HakerNews. |
 | [updates](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#updates) | Returns item IDs and users IDs where there were changes. |
 
 
@@ -203,7 +203,7 @@ HTTP Code: 200 - OK
 
 <h2>Top Stories</h2>
 
-Returns the 500 top stories posted on HakerNews (also contains jobs).
+Returns the top of 500 new stories posted on HakerNews (also contains jobs).
 
 <h3>HTTP request</h3>
 
@@ -371,7 +371,7 @@ stories id | array[integer] | Required. Max 500 IDs.
 
 <h2>Ask Stories</h2>
 
-Returns the top 200 Ask stories posted on HakerNews (https://news.ycombinator.com/ask).
+Returns the 200 ask stories posted on HakerNews (https://news.ycombinator.com/ask).
 
 <h3>HTTP request</h3>
 
@@ -427,7 +427,7 @@ stories id | array[integer] | Required. Max 200 IDs.
 
 <h2>Show Stories</h2>
 
-Returns the 200 Show stories posted on HakerNews (https://news.ycombinator.com/show).
+Returns the 200 show stories posted on HakerNews (https://news.ycombinator.com/show).
  
 <h3>HTTP request</h3>
 
@@ -483,7 +483,7 @@ stories id | array[integer]| Required. Max 200 IDs.
 
 <h2>Job Stories</h2>
 
-Returns the latest 200 Jobs posted on HakerNews (https://news.ycombinator.com/jobs).
+Returns the 200 jobs posted on HakerNews (https://news.ycombinator.com/jobs).
  
 <h3>HTTP request</h3>
 
