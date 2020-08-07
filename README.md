@@ -154,9 +154,9 @@ This section contains description of HackerNews API. If you don't know anything 
 | [maxitem](https://github.com/myafka/HN-API-Docs/blob/master/README.md#max-item-id) | Returns the current largest item ID. |
 | [topstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#top-stories) | Returns the top of recent stories posted on HakerNews. |
 | [newstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#new-stories) | Returns the newest stories posted on HakerNews. |
-| [beststories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#bests-stories) | Returns the best stories posted on HakerNews. |
-| [askstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#asks-stories) | Returns the ask stories posted on HakerNews. |
-| [showstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#shows-stories) | Returns the show stories posted on HakerNews. |
+| [beststories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#best-stories) | Returns the best stories posted on HakerNews. |
+| [askstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#ask-stories) | Returns the ask stories posted on HakerNews. |
+| [showstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#ask-stories) | Returns the show stories posted on HakerNews. |
 | [jobstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#job-stories) | Returns the latest jobs posted on HakerNews. |
 | [updates](https://github.com/myafka/HN-API-Docs/blob/master/README.md#updates) | Returns item IDs and users IDs where there were changes. |
 
