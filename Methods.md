@@ -6,7 +6,7 @@
 | [items](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#Items) | Returns the information about the item (job, story, comment, poll or pollopt). |
 | [users](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#Users) | Returns the current user's HakerNews profile. |
 | [maxitem](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#max-item-id) | Returns the current largest item ID. |
-| [topstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#top-stories) | Returns the top of new stories posted on HakerNews. |
+| [topstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#top-stories) | Returns the top of recent stories posted on HakerNews. |
 | [newstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#new-stories) | Returns the newest stories posted on HakerNews. |
 | [beststories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#bests-stories) | Returns the best stories posted on HakerNews. |
 | [askstories](https://github.com/myafka/HackerNewsDocs/blob/master/Methods.md#asks-stories) | Returns the ask stories posted on HakerNews. |
@@ -203,7 +203,7 @@ HTTP Code: 200 - OK
 
 <h2>Top Stories</h2>
 
-Returns the top of 500 new stories posted on HakerNews (also contains jobs).
+Returns the top of 500 recent stories posted on HakerNews (also contains jobs).
 
 <h3>HTTP request</h3>
 
