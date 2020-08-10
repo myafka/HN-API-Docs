@@ -12,5 +12,6 @@ jobs:
       with:
             sources: 'README.md'
     - uses: actions/upload-artifact@v2
-      name: 'document.pdf'
+      with:
+           name: 'document.pdf'
 
