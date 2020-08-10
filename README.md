@@ -206,7 +206,7 @@ Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/
 | time | integer | Optional. Creation date of the item, in [Unix Time](http://en.wikipedia.org/wiki/Unix_time).    |✔|✔|✔|✔|✔|
 | text | string | Optional. The comment, story or poll text.    |✔|✔|✔|✔|✔|
 | dead | boolean | Optional. 'true' - if the item is dead. |✔|✔|✔|✔|✔|
-| parent | integer | Optional. The items parent. |||✔||✔|
+| parent | integer | Optional. The items parent. |||✔|||
 | poll | integer | Optional. The pollopt's associated poll. |||||✔|
 | kids | array[integer] | Optional. The IDs of the item's comments, in ranked display order. |✔|✔|✔|✔|✔|
 | url | string | Optional. The URL. |✔|✔||||
