@@ -8,9 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: mkrakowitzer/actions-makepdfs@master
+    - uses: mkrakowitzer/actions-makepdfs@master\
+      with:
+       name: README
       if: github.ref == 'refs/heads/master/'
     - uses: actions/upload-artifact@v1
-      with:
-        name: test-docs
-        path: tmp
+
