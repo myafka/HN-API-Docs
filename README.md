@@ -115,7 +115,7 @@ Example response:
 }
 
 ```
-Now we know that maxraz has a good karma and he has many other stories. If you are interested, you can see what they are about using the method from Step 2.
+Now we know that maxraz has good karma and he has many other stories. If you are interested, you can see what they are about using the method from Step 2.
 
 <b>What's next</b>
 
@@ -135,7 +135,7 @@ The site has several items of content:
   * show - post with something that you've made
 * job - thread where you can post job offers
 * comment - self-explanatory
-* poll - a survey with set of answer options, each answer is a pollopt
+* poll - a survey with a set of answer options, each answer is a pollopt
 
 The site has several collections of stories: 
 * top stories (https://news.ycombinator.com/news) - top of the recent stories  
@@ -144,7 +144,7 @@ The site has several collections of stories:
 
 <h1>Methods</h1>
 
-This section contains description of HackerNews API. If you don't know anything about site HackerNews, at first read the article [About](https://github.com/myafka/Test/blob/master/About.md).
+This section contains a description of HackerNews API. If you don't know anything about site HackerNews, at first read the article [About](https://github.com/myafka/Test/blob/master/About.md).
 
 
 | Method      | Description |
@@ -206,7 +206,7 @@ Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/
 | time | integer | Optional. Creation date of the item, in [Unix Time](http://en.wikipedia.org/wiki/Unix_time).    |✔|✔|✔|✔|✔|
 | text | string | Optional. The comment, story or poll text.    |✔|✔|✔|✔|✔|
 | dead | boolean | Optional. 'true' - if the item is dead. |✔|✔|✔|✔|✔|
-| parent | integer | Optional. The items parent. |||✔|||
+| parent | integer | Optional. The item's parent. |||✔|||
 | poll | integer | Optional. The pollopt's associated poll. |||||✔|
 | kids | array[integer] | Optional. The IDs of the item's comments, in ranked display order. |✔|✔|✔|✔|✔|
 | url | string | Optional. The URL. |✔|✔||||
@@ -279,7 +279,7 @@ Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/
 | ------------- |-------------|--------|
 id | string | Required. The user's unique ID. Case-sensitive.
 delay | integer | Optional. Delay in minutes between a comment's creation and its visibility to other users. Max 10.
-created | number | Required. Timestamp of the user creation, in [Unix Time](http://en.wikipedia.org/wiki/Unix_time).
+created | number | Required. The timestamp of the user creation, in [Unix Time](http://en.wikipedia.org/wiki/Unix_time).
 karma | number | Required. The user's karma. Can be negative.
 about | string | Optional. The user's self-description.
 submitted | array[integer] | Optional. List of IDs of stories, polls and comments, that user posted.
@@ -707,7 +707,7 @@ Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
 items[] | array[integer] | Required. The list of HackerNews item IDs where there were changes.
-profiles[] | array[string] | Required. The list of HackerNews users IDs where there were changes. User ID can only contain letters, digits, dashes and underscores, and could be between 2 and 15 characters long.
+profiles[] | array[string] | Required. The list of HackerNews users IDs where there were changes. The user ID can only contain letters, digits, dashes and underscores, and could be between 2 and 15 characters long.
 
 <h3>Example</h3>
 
@@ -749,7 +749,7 @@ If you are a new to this API, we recommend starting with [Getting started](https
 
 <h2>Fetch 50 stories</h2>
 
-Imagine that you need to select 50 new stories. Since the [New Stories method](https://github.com/myafka/HN-API-Docs/blob/master/README.md#new-stories) returns 500 stories, you will need to take addional steps.
+Imagine that you need to select 50 new stories. Since the [New Stories method](https://github.com/myafka/HN-API-Docs/blob/master/README.md#new-stories) returns 500 stories, you will need to take additional steps.
 
 Example request:
 
