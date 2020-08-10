@@ -7,7 +7,7 @@ The HackerNews API is used for getting information from the site [HackerNews](ht
 
 * Get to know [about site](#about-hacker-news) Hacker News
 
-* Learn about API [methods](#Methods)
+* Learn about API [methods](#methods)
 
 * Read about other [use cases](#use-cases)
 
@@ -20,7 +20,7 @@ Examples in this guide are written in Python 3. You can use any programming lang
 
 ## Step 1. The top stories
 
-Let's find out what stories are in the top right now. To do this, we need the [Top Stories method](https://github.com/myafka/HN-API-Docs/blob/master/README.md#top-stories). You don't need to set path parameters in this method.
+Let's find out what stories are in the top right now. To do this, we need the [Top Stories method](#top-stories). You don't need to set path parameters in this method.
  
 Example request:
 
@@ -119,7 +119,7 @@ Now we know that maxraz has good karma and he has many other stories. If you are
 
 <b>What's next</b>
 
-* [Learn about API methods](#Methods)
+* [Learn about API methods](#methods)
 
 * [Read about other use cases](#use-cases)
 
@@ -150,7 +150,7 @@ This section contains a description of HackerNews API. If you don't know anythin
 | Method      | Description |
 | ------------- |-------------|
 | [item](#item) | Returns the information about the item (job, story, comment, poll or pollopt). |
-| [user](#User) | Returns the current user's HakerNews profile. |
+| [user](#user) | Returns the current user's HakerNews profile. |
 | [maxitem](#max-item-id) | Returns the current largest item ID. |
 | [topstories](#top-stories) | Returns the top of recent stories posted on HakerNews. |
 | [newstories](#new-stories) | Returns the newest stories posted on HakerNews. |
