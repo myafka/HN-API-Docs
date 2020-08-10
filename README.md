@@ -12,7 +12,7 @@ The HackerNews API is used for getting information from the site [HackerNews](ht
 * Read about other [use cases](#use-cases)
 
 
-<h1>Getting started</h1>
+# Getting started
 
 You can use this API to get information from the site https://news.ycombinator.com. For example, a list of the most popular stories or the title and URL of a story.
 
