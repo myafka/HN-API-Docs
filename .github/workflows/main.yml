@@ -14,5 +14,6 @@ jobs:
             sources: 'README.md'
     - uses: actions/upload-artifact@v2
       with:
-          name: 'document.pdf' path: ${{ steps.publish-document.outputs.pdf }}
+          name: 'document.pdf'
+          path: ${{ steps.publish-document.outputs.pdf }}
 
