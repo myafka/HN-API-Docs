@@ -5,11 +5,11 @@ The HackerNews API is used for getting information from the site [HackerNews](ht
 
 * [Get started](#getting-started)
 
-* Get to know [about site](https://github.com/myafka/HN-API-Docs/blob/master/README.md#about-hacker-news) Hacker News
+* Get to know [about site](#about-hacker-news) Hacker News
 
-* Learn about API [methods](https://github.com/myafka/HN-API-Docs/blob/master/README.md#Methods)
+* Learn about API [methods](#Methods)
 
-* Read about other [use cases](https://github.com/myafka/HN-API-Docs/blob/master/README.md#use-cases)
+* Read about other [use cases](#use-cases)
 
 
 <h1>Getting started</h1>
@@ -49,7 +49,7 @@ In addition to the top stories you can get the newest stories, the best stories,
 
 The ID is a very important and useful entity that binds everything together. Using the ID, you can find the desired story. For example, let's see what is so special about the ID 24050651 story because it is so popular.
 
-To do this, we need the [Item method](https://github.com/myafka/HN-API-Docs/blob/master/README.md#item). In this method, you need to set ID as a path parameter.
+To do this, we need the [Item method](#item). In this method, you need to set ID as a path parameter.
 
 Example request:
 
@@ -86,7 +86,7 @@ The HakerNews site has not only storis, but also: jobs, comments, polls or pollo
 
 <h2>Step 3. The information about the user</h2>
 
-To get data about a user, you need the [User method](https://github.com/myafka/HN-API-Docs/blob/master/README.md#user). In this method, you need to set user ID.
+To get data about a user, you need the [User method](#user). In this method, you need to set user ID.
 For example, we can find information about the author of the most popular story. His user ID is maxraz.
 
 Example request:
@@ -119,9 +119,9 @@ Now we know that maxraz has good karma and he has many other stories. If you are
 
 <b>What's next</b>
 
-* [Learn about API methods](https://github.com/myafka/HN-API-Docs/blob/master/README.md#Methods)
+* [Learn about API methods](#Methods)
 
-* [Read about other use cases](https://github.com/myafka/HN-API-Docs/blob/master/README.md#use-cases)
+* [Read about other use cases](#use-cases)
 
 
 <h1>About Hacker News</h1>
@@ -144,21 +144,21 @@ The site has several collections of stories:
 
 <h1>Methods</h1>
 
-This section contains a description of HackerNews API. If you don't know anything about site HackerNews, at first read the article [About](https://github.com/myafka/Test/blob/master/About.md).
+This section contains a description of HackerNews API. If you don't know anything about site HackerNews, at first read the article [About](#about-hacker-news).
 
 
 | Method      | Description |
 | ------------- |-------------|
-| [item](https://github.com/myafka/HN-API-Docs/blob/master/README.md#item) | Returns the information about the item (job, story, comment, poll or pollopt). |
-| [user](https://github.com/myafka/HN-API-Docs/blob/master/README.md#User) | Returns the current user's HakerNews profile. |
-| [maxitem](https://github.com/myafka/HN-API-Docs/blob/master/README.md#max-item-id) | Returns the current largest item ID. |
-| [topstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#top-stories) | Returns the top of recent stories posted on HakerNews. |
-| [newstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#new-stories) | Returns the newest stories posted on HakerNews. |
-| [beststories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#best-stories) | Returns the best stories posted on HakerNews. |
-| [askstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#ask-stories) | Returns the ask stories posted on HakerNews. |
-| [showstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#show-stories) | Returns the show stories posted on HakerNews. |
-| [jobstories](https://github.com/myafka/HN-API-Docs/blob/master/README.md#job-stories) | Returns the latest jobs posted on HakerNews. |
-| [updates](https://github.com/myafka/HN-API-Docs/blob/master/README.md#updates) | Returns item IDs and users IDs where there were changes. |
+| [item](#item) | Returns the information about the item (job, story, comment, poll or pollopt). |
+| [user](#User) | Returns the current user's HakerNews profile. |
+| [maxitem](#max-item-id) | Returns the current largest item ID. |
+| [topstories](#top-stories) | Returns the top of recent stories posted on HakerNews. |
+| [newstories](#new-stories) | Returns the newest stories posted on HakerNews. |
+| [beststories](#best-stories) | Returns the best stories posted on HakerNews. |
+| [askstories](#ask-stories) | Returns the ask stories posted on HakerNews. |
+| [showstories](#show-stories) | Returns the show stories posted on HakerNews. |
+| [jobstories](#job-stories) | Returns the latest jobs posted on HakerNews. |
+| [updates](#updates) | Returns item IDs and users IDs where there were changes. |
 
 
 <h2>Item</h2>
@@ -745,11 +745,11 @@ profiles[] | array[string] | Required. The list of HackerNews users IDs where th
 
 This section contains examples of API usage. The examples in this guide are written in Python 3. You can use any programming language to work with the API.
 
-If you are a new to this API, we recommend starting with [Getting started](https://github.com/myafka/HN-API-Docs/blob/master/README.md#getting-started).
+If you are a new to this API, we recommend starting with [Getting started](#getting-started).
 
 <h2>Fetch 50 stories</h2>
 
-Imagine that you need to select 50 new stories. Since the [New Stories method](https://github.com/myafka/HN-API-Docs/blob/master/README.md#new-stories) returns 500 stories, you will need to take additional steps.
+Imagine that you need to select 50 new stories. Since the [New Stories method](#new-stories) returns 500 stories, you will need to take additional steps.
 
 Example request:
 
@@ -826,7 +826,7 @@ In response, you will get a sorted array.
 {'by': 'sumitg12', 'descendants': 0, 'id': 24065308, 'score': 1, 'time': 1596659900, 'title': 'Auto Labeling for Images', 'type': 'story', 'url': 'https://developer.ibm.com/technologies/artificial-intelligence/blogs/ibm-cloud-annotations-tool-eases-the-process-of-ai-data-labeling/'}]
 ```
 
-Well done! The story "Why there’s so little left of the early internet" has the bigest score.
+Well done! The story "Why there’s so little left of the early internet" has the biggest score.
 
 <h2>Create a mobile app</h2>
 
