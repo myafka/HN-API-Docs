@@ -2,6 +2,7 @@ on:
  push:
  watch:
  - main
+ workflow_dispatch:
 
 name: CreatePDFs
 
