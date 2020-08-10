@@ -1,4 +1,4 @@
-<h1>Overview</h1>
+# Overview
 
 The HackerNews API is used for getting information from the site [HackerNews](https://news.ycombinator.com). The API was built using Firebase. 
 
@@ -18,7 +18,7 @@ You can use this API to get information from the site https://news.ycombinator.c
 
 Examples in this guide are written in Python 3. You can use any programming language to work with the API.
 
-<h2>Step 1. The top stories</h2>
+## Step 1. The top stories
 
 Let's find out what stories are in the top right now. To do this, we need the [Top Stories method](https://github.com/myafka/HN-API-Docs/blob/master/README.md#top-stories). You don't need to set path parameters in this method.
  
@@ -45,7 +45,7 @@ Example response:
 ```
 In addition to the top stories you can get the newest stories, the best stories, the top ask stories, the show stories and the latest jobs posted. All these methods return an array with the IDs.
 
-<h2>Step 2. The information about the item</h2>
+## Step 2. The information about the item
 
 The ID is a very important and useful entity that binds everything together. Using the ID, you can find the desired story. For example, let's see what is so special about the ID 24050651 story because it is so popular.
 
@@ -84,7 +84,7 @@ Hm, "Show HN: Visualize Graph Theory", sounds interesting!
 
 The HakerNews site has not only storis, but also: jobs, comments, polls or pollopts. You can also get data about them using this method, you just need to change the ID.
 
-<h2>Step 3. The information about the user</h2>
+## Step 3. The information about the user
 
 To get data about a user, you need the [User method](#user). In this method, you need to set user ID.
 For example, we can find information about the author of the most popular story. His user ID is maxraz.
@@ -124,7 +124,7 @@ Now we know that maxraz has good karma and he has many other stories. If you are
 * [Read about other use cases](#use-cases)
 
 
-<h1>About Hacker News</h1>
+# About Hacker News
 
 Hacker News is a social news site focusing on computer science and entrepreneurship. 
 
@@ -142,7 +142,7 @@ The site has several collections of stories:
 * newest stories (https://news.ycombinator.com/newest) - recently published stories 
 * best stories (https://news.ycombinator.com/top)- best of the best stories 
 
-<h1>Methods</h1>
+# Methods
 
 This section contains a description of HackerNews API. If you don't know anything about site HackerNews, at first read the article [About](#about-hacker-news).
 
@@ -161,25 +161,25 @@ This section contains a description of HackerNews API. If you don't know anythin
 | [updates](#updates) | Returns item IDs and users IDs where there were changes. |
 
 
-<h2>Item</h2>
+## Item
 
 Returns the information about the item (job, story, comment, poll or pollopt).
 
-<h3>HTTP request</h3>
+### HTTP request
 
 `GET https://hacker-news.firebaseio.com/v0/item/{id}.json`
 
-<h3>Path parameters</h3>
+### Path parameters
 
 |Parameter | Type | Description |
 | ------------- |-------------|--------|
 | id | integer | Required. The item's unique identifier. |
 
-<h3>Query parameters</h3>
+### Query parameters
 
 Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data).
 
-<h3>Response</h3>
+### Response
 
 `HTTP Code: 200 - OK`
 
@@ -215,13 +215,13 @@ Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/
 | parts | array[integer] | Optional. A list of related pollopts, in the display order.    ||||✔||
 | descendants | integer | Optional. The total comment count.    |✔|||✔||
 
-<h3>Example</h3>
+### Example
 
-<h4>Request</h4>
+#### Request
 
   `GET https://hacker-news.firebaseio.com/v0/item/88.json`
   
-<h4>Response</h4>
+#### Response
 
 `HTTP Code: 200 - OK`
 
@@ -239,25 +239,25 @@ Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/
 }
 ```
 
-<h2>User</h2>
+## User
 
 Returns the current user's HakerNews profile. Only users that have public activity (comments or story submissions) on the site are available through the API.
 
-<h3>HTTP request</h3>
+### HTTP request
 
 `GET https://hacker-news.firebaseio.com/v0/user/{user-id}.json`
 
-<h3>Path parameters</h3>
+### Path parameters
 
 |Parameter    | Type | Description |
 | ------------- |-------------|--------|
 | user-id   | string | Required. The user's unique ID. Case-sensitive. |
 
-<h3>Query parameters</h3>
+### Query parameters
 
 Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data).
 
-<h3>Response</h3>
+### Response
 
 `HTTP Code: 200 - OK`
 
@@ -284,13 +284,13 @@ karma | number | Required. The user's karma. Can be negative.
 about | string | Optional. The user's self-description.
 submitted | array[integer] | Optional. List of IDs of stories, polls and comments, that user posted.
 
-<h3>Example</h3>
+### Example
 
-<h4>Request</h4>
+#### Request
 
 `GET https://hacker-news.firebaseio.com/v0/user/myafka.json`
   
-<h4>Response</h4>
+#### Response
 
 `HTTP Code: 200 - OK`
 
@@ -303,19 +303,19 @@ submitted | array[integer] | Optional. List of IDs of stories, polls and comment
 }
 ```
 
-<h2>Max Item ID</h2>
+## Max Item ID
 
 Returns the current largest item ID. You can walk backwards from here to discover all items.
 
-<h3>HTTP request</h3>
+### HTTP request
 
 `GET https://hacker-news.firebaseio.com/v0/maxitem.json`
 
-<h3>Query parameters</h3>
+### Query parameters
 
 Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data).
 
-<h3>Response</h3>
+### Response
 
 ```
 HTTP Code: 200 - OK
@@ -327,13 +327,13 @@ integer
 | ------------- |-------------|--------|
 id | integer | Required. The current largest item ID.
 
-<h3>Example</h3>
+### Example
 
-<h4>Request</h4>
+#### Request
 
 `GET https://hacker-news.firebaseio.com/v0/maxitem.json`
   
-<h4>Response</h4>
+#### Response
 
 ```
 HTTP Code: 200 - OK
@@ -341,19 +341,19 @@ HTTP Code: 200 - OK
 24051058
 ```
 
-<h2>Top Stories</h2>
+## Top Stories
 
 Returns the top of 500 recent stories posted on HakerNews (also contains jobs).
 
-<h3>HTTP request</h3>
+### HTTP request
 
 `GET https://hacker-news.firebaseio.com/v0/topstories.json`
 
-<h3>Query parameters</h3>
+### Query parameters
 
 Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data).
 
-<h3>Response</h3>
+### Response
 
 `HTTP Code: 200 - OK`
 
@@ -373,13 +373,13 @@ Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/
 | ------------- |-------------|--------|
 stories id | array[integer] | Required. Max 500 IDs.
 
-<h3>Example</h3>
+### Example
 
-<h4>Request</h4>
+#### Request
 
 `GET https://hacker-news.firebaseio.com/v0/topstories.json`
   
-<h4>Response</h4>
+#### Response
 
 `HTTP Code: 200 - OK`
 
@@ -395,19 +395,19 @@ stories id | array[integer] | Required. Max 500 IDs.
 ]
 ```
 
-<h2>New Stories</h2>
+## New Stories
 
 Returns the 500 newest stories posted on HakerNews (https://news.ycombinator.com/newest).
 
-<h3>HTTP request</h3>
+### HTTP request
 
 `GET https://hacker-news.firebaseio.com/v0/newstories.json`
 
-<h3>Query parameters</h3>
+### Query parameters
 
 Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data).
 
-<h3>Response</h3>
+### Response
 
 `HTTP Code: 200 - OK`
 
@@ -427,13 +427,13 @@ Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/
 | ------------- |-------------|--------|
 stories id | array[integer] | Required. Max 500 IDs.
 
-<h3>Example</h3>
+### Example
 
-<h4>Request</h4>
+#### Request
 
 `GET https://hacker-news.firebaseio.com/v0/newstories.json`
   
-<h4>Response</h4>
+#### Response
 
 `HTTP Code: 200 - OK`
 
@@ -449,19 +449,19 @@ stories id | array[integer] | Required. Max 500 IDs.
 ]
 ```
 
-<h2>Best Stories</h2>
+## Best Stories
 
 Returns the best stories posted on HakerNews (https://news.ycombinator.com/best).
 
-<h3>HTTP request</h3>
+### HTTP request
 
 `GET https://hacker-news.firebaseio.com/v0/besttories.json`
 
-<h3>Query parameters</h3>
+### Query parameters
 
 Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data).
 
-<h3>Response</h3>
+### Response
 
 `HTTP Code: 200 - OK`
 
@@ -481,13 +481,13 @@ Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/
 | ------------- |-------------|--------|
 stories id | array[integer] | Required. Max 500 IDs.
 
-<h3>Example</h3>
+### Example
 
-<h4>Request</h4>
+#### Request
 
 `GET https://hacker-news.firebaseio.com/v0/besttories.json`
   
-<h4>Response</h4>
+#### Response
 
 `HTTP Code: 200 - OK`
 
@@ -503,19 +503,19 @@ stories id | array[integer] | Required. Max 500 IDs.
 ]
 ```
 
-<h2>Ask Stories</h2>
+## Ask Stories
 
 Returns the 200 ask stories posted on HakerNews (https://news.ycombinator.com/ask).
 
-<h3>HTTP request</h3>
+### HTTP request
 
 `GET https://hacker-news.firebaseio.com/v0/askstories.json`
 
-<h3>Query parameters</h3>
+### Query parameters
 
 Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data).
 
-<h3>Response</h3>
+### Response
 
 `HTTP Code: 200 - OK`
 
@@ -535,13 +535,13 @@ Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/
 | ------------- |-------------|--------|
 stories id | array[integer] | Required. Max 200 IDs.
 
-<h3>Example</h3>
+### Example
 
-<h4>Request</h4>
+#### Request
 
 `GET https://hacker-news.firebaseio.com/v0/askstories.json`
   
-<h4>Response</h4>
+#### Response
 
 `HTTP Code: 200 - OK`
 
@@ -557,19 +557,19 @@ stories id | array[integer] | Required. Max 200 IDs.
 ]
 ```
 
-<h2>Show Stories</h2>
+## Show Stories
 
 Returns the 200 show stories posted on HakerNews (https://news.ycombinator.com/show).
  
-<h3>HTTP request</h3>
+### HTTP request
 
 `GET https://hacker-news.firebaseio.com/v0/showstories.json`
 
-<h3>Query parameters</h3>
+### Query parameters
 
 Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data).
 
-<h3>Response</h3>
+### Response
 
 `HTTP Code: 200 - OK`
 
@@ -589,13 +589,13 @@ Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/
 | ------------- |-------------|--------|
 stories id | array[integer]| Required. Max 200 IDs.
 
-<h3>Example</h3>
+### Example
 
-<h4>Request</h4>
+#### Request
 
 `GET https://hacker-news.firebaseio.com/v0/showstories.json`
   
-<h4>Response</h4>
+#### Response
 
 `HTTP Code: 200 - OK`
 
@@ -611,19 +611,19 @@ stories id | array[integer]| Required. Max 200 IDs.
 ]
 ```
 
-<h2>Job Stories</h2>
+## Job Stories
 
 Returns the 200 jobs posted on HakerNews (https://news.ycombinator.com/jobs).
  
-<h3>HTTP request</h3>
+### HTTP request
 
 `GET https://hacker-news.firebaseio.com/v0/jobstories.json`
 
-<h3>Query parameters</h3>
+### Query parameters
 
 Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data).
 
-<h3>Response</h3>
+### Response
 
 `HTTP Code: 200 - OK`
 
@@ -643,13 +643,13 @@ Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/
 | ------------- |-------------|--------|
 stories id | array[integer] | Required. Max 200 IDs.
 
-<h3>Example</h3>
+### Example
 
-<h4>Request</h4>
+#### Request
 
 `GET https://hacker-news.firebaseio.com/v0/jobstories.json`
   
-<h4>Response</h4>
+#### Response
 
 `HTTP Code: 200 - OK`
 
@@ -665,19 +665,19 @@ stories id | array[integer] | Required. Max 200 IDs.
 ]
 ```
 
-<h2>Updates</h2>
+## Updates
 
 Returns item IDs and users IDs where there were changes.
 
-<h3>HTTP request</h3>
+### HTTP request
 
 `GET https://hacker-news.firebaseio.com/v0/updates.json`
 
-<h3>Query parameters</h3>
+### Query parameters
 
 Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/rest/retrieve-data).
 
-<h3>Response</h3>
+### Response
 
 `HTTP Code: 200 - OK`
 
@@ -709,13 +709,13 @@ Optional. More in the [Firebase Docs](https://firebase.google.com/docs/database/
 items[] | array[integer] | Required. The list of HackerNews item IDs where there were changes.
 profiles[] | array[string] | Required. The list of HackerNews users IDs where there were changes. The user ID can only contain letters, digits, dashes and underscores, and could be between 2 and 15 characters long.
 
-<h3>Example</h3>
+### Example
 
-<h4>Request</h4>
+#### Request
 
 `GET https://hacker-news.firebaseio.com/v0/updates.json`
   
-<h4>Response</h4>
+#### Response
 
 `HTTP Code: 200 - OK`
 
@@ -741,13 +741,13 @@ profiles[] | array[string] | Required. The list of HackerNews users IDs where th
   ]
 }
 ```
-<h1>Use cases</h1>
+# Use cases
 
 This section contains examples of API usage. The examples in this guide are written in Python 3. You can use any programming language to work with the API.
 
 If you are a new to this API, we recommend starting with [Getting started](#getting-started).
 
-<h2>Fetch 50 stories</h2>
+## Fetch 50 stories
 
 Imagine that you need to select 50 new stories. Since the [New Stories method](#new-stories) returns 500 stories, you will need to take additional steps.
 
@@ -776,9 +776,8 @@ In response, you will get an array of 50 IDs of the stories.
     24065859, 24065853, 24065843, 24065838, 24065834, ... ,24065260
 ]
 ```
-
   
-<h2>Sorted stories</h2>
+## Sorted stories
 
 In this example, we order stories in a descending order, sorted by score.
 
@@ -828,7 +827,7 @@ In response, you will get a sorted array.
 
 Well done! The story "Why there’s so little left of the early internet" has the biggest score.
 
-<h2>Create a mobile app</h2>
+### Create a mobile app
 
 Our API uses Firebase. Firebase serves as a database that changes in real-time and stores data in JSON. Any changes to the database are immediately synced between all clients or devices that use the same database. 
 
