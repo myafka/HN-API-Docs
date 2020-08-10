@@ -9,11 +9,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: shrink/actions-document-publish@v1
-        with:
- sources: 'README.md'
+      with:
+            sources: 'README.md'
     - uses: actions/upload-artifact@v2
-        id: upload-document
-        with:
- name: 'document.
-          pdf'path: ${{ outputs.pdf }}
+      name: 'document.pdf'
 
