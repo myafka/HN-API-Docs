@@ -7,10 +7,13 @@ jobs:
   makepdfs:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: mkrakowitzer/actions-makepdfs@master\
-      with:
-       name: README
-      if: github.ref == 'refs/heads/master/'
-    - uses: actions/upload-artifact@v1
+    - uses: actions/checkout@v2
+    - uses: shrink/actions-document-publish@v1
+        with:
+ sources: 'README.md'
+    - uses: actions/upload-artifact@v2
+        id: upload-document
+        with:
+ name: 'document.
+          pdf'path: ${{ outputs.pdf }}
 
